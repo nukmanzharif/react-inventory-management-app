@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "Inventory-Management-System",
+    "displayName": "Inventory Management",
     "slug": "Inventory-Management-System",
     "version": "1.0.0",
     "orientation": "portrait",
