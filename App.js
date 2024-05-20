@@ -20,7 +20,7 @@ const HomeScreen = ({ navigation }) => {
   const expiredItems = items.itemList.filter(item => new Date(item.expiry_date) <= currentDate);
 
   const sections = [
-    { title: 'Non-Expired Items', data: nonExpiredItems },
+    { title: 'Items', data: nonExpiredItems },
     { title: 'Expired Items', data: expiredItems }
   ];
 
