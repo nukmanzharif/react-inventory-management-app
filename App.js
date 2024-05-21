@@ -15,12 +15,19 @@ const itemSize = (width - sidePadding * 2 - 10) / numColumns;
 
 const HomeScreen = ({ navigation }) => {
   const currentDate = new Date();
+  const oneMonth = new Date();
+  oneMonth.setMonth(currentDate.getMonth()+1)
 
   const nonExpiredItems = items.itemList.filter(item => new Date(item.expiry_date) > currentDate);
   const expiredItems = items.itemList.filter(item => new Date(item.expiry_date) <= currentDate);
+  const nearlyExpired = items.itemList.filter(item => {
+    expiryDate = new Date(item.expiry_date);
+    return expiryDate > currentDate && expiryDate <= oneMonth;
+  });
 
   const sections = [
     { title: 'Items', data: nonExpiredItems },
+    { title: 'Nearly Expired Items', data: nearlyExpired },
     { title: 'Expired Items', data: expiredItems }
   ];
 

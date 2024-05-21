@@ -13,16 +13,24 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "buildnumber": "1",
+      "bundleIdentifier": "com.nukmanzharif.InventoryManagementSystem"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.nukmanzharif.InventoryManagementSystem"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a6826681-1ea2-451b-a4ba-3401cfd4e91c"
+      }
     }
   }
 }
